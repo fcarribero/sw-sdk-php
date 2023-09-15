@@ -1,5 +1,5 @@
 {
-  "name": "lunasoft/sw-sdk-php",
+  "name": "webneex/sw-sdk-php",
   "description": "PHP Library for SW Services",
   "type": "library",
   "version": "1.0.8.4",
