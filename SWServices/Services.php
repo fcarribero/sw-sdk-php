@@ -1,6 +1,5 @@
 <?php
 namespace SWServices;
-require_once 'SWServices/Helpers/RequestHelper.php';
 
 use Exception;
 use SWServices\Authentication\AuthenticationService as Authentication;
