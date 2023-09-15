@@ -4,16 +4,14 @@ namespace SWServices\Stamp;
 
 use Exception;
 
-class StampHelper
-{
+class StampHelper {
     private static $xml = null;
     private static $_response = null;
     private static $_urlApi = null;
     private static $customId = null;
     private static $email = null;
 
-    public static function get_xml($isB64)
-    {
+    public static function get_xml($isB64) {
         try {
 
             if ($isB64 == false) {
@@ -26,8 +24,8 @@ class StampHelper
             exit();
         }
     }
-    public static function validate_xml($xml)
-    {
+
+    public static function validate_xml($xml) {
         if (!empty($xml)) {
             return $xml;
         } else {
@@ -35,8 +33,8 @@ class StampHelper
             exit();
         }
     }
-    public static function validate_customid($customId)
-    {
+
+    public static function validate_customid($customId) {
         try {
             if ($customId != NULL || $customId != "") {
                 return $customId;
@@ -46,11 +44,11 @@ class StampHelper
             exit();
         }
     }
-    public static function validate_email($email)
-    {
+
+    public static function validate_email($email) {
         try { //Revisar funcionalidad del helper solo falta este cambio para concretar el ejercicio
             if ((count(array($email)) <= 5) && (count(array($email)) > 0)) {
-                foreach ((array) $email as $valor) {
+                foreach ((array)$email as $valor) {
                     $valor = (filter_var($valor, FILTER_VALIDATE_EMAIL));
                     if ($valor == false) {
                         $eResult = false;
@@ -68,4 +66,6 @@ class StampHelper
             exit();
         }
     }
-};
+}
+
+;

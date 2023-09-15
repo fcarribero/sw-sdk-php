@@ -3,8 +3,8 @@
 namespace SWServices\Storage;
 
 use SWServices\Services;
-class StorageResponse extends Services
-{
+
+class StorageResponse extends Services {
     private static $datos;
     private static $xml;
     private static $codigoCancelacion;
@@ -57,11 +57,11 @@ class StorageResponse extends Services
     private static $urlXml;
     private static $yearMonth;
     private static $status;
+
     /**
      * Inicializa constructor.
      */
-    public function __construct($data)
-    {
+    public function __construct($data) {
         if (isset($data->data->records[0])) {
             self::$datos = $data->data;
             self::$xml = $data->data->records[0]->urlXml;
@@ -120,236 +120,232 @@ class StorageResponse extends Services
             //se valida credenciales en esta clase ya que es la última en instanciarse
             //en storageservice
             self::ValidateCredentials();
-            echo ("UUID inválido o no pertenece a la cuenta. \n");
+            echo("UUID inválido o no pertenece a la cuenta. \n");
         }
     }
+
     /**
      * Getters.
      */
-    public static function getData()
-    {
+    public static function getData() {
         return self::$datos;
     }
-    public static function getXml()
-    {
+
+    public static function getXml() {
         return self::$xml;
     }
-    public static function getPdf()
-    {
+
+    public static function getPdf() {
         return self::$urlPDF;
     }
-    public static function getCodigoCancelacion()
-    {
+
+    public static function getCodigoCancelacion() {
         return self::$codigoCancelacion;
     }
-    public static function getStatusSAT()
-    {
+
+    public static function getStatusSAT() {
         return self::$statusSAT;
     }
-    public static function getUrlCancelacion()
-    {
+
+    public static function getUrlCancelacion() {
         return self::$urlAckCancellation;
     }
-    public static function getHasAddenda()
-    {
+
+    public static function getHasAddenda() {
         return self::$hasAddenda;
     }
-    public static function getAddenda()
-    {
+
+    public static function getAddenda() {
         return self::$addenda;
     }
-    public static function setAddenda($addenda)
-    {
+
+    public static function setAddenda($addenda) {
         self::$addenda = $addenda;
     }
-    public static function getUrlAddenda()
-    {
+
+    public static function getUrlAddenda() {
         return self::$urlAddenda;
     }
-    public static function getFechaGeneracionPdf()
-    {
+
+    public static function getFechaGeneracionPdf() {
         return self::$fechaGeneracionPdf;
     }
-    public static function getIdDealer()
-    {
+
+    public static function getIdDealer() {
         return self::$idDealer;
     }
-    public static function getIdUser()
-    {
+
+    public static function getIdUser() {
         return self::$idUser;
     }
-    public static function getVersion()
-    {
+
+    public static function getVersion() {
         return self::$version;
     }
-    public static function getSerie()
-    {
+
+    public static function getSerie() {
         return self::$serie;
     }
-    public static function getFolio()
-    {
+
+    public static function getFolio() {
         return self::$folio;
     }
-    public static function getFecha()
-    {
+
+    public static function getFecha() {
         return self::$fecha;
     }
-    public static function getNumeroCertificado()
-    {
+
+    public static function getNumeroCertificado() {
         return self::$numeroCertificado;
     }
-    public static function getSubTotal()
-    {
+
+    public static function getSubTotal() {
         return self::$subTotal;
     }
-    public static function getDescuento()
-    {
+
+    public static function getDescuento() {
         return self::$descuento;
     }
-    public static function getTotal()
-    {
+
+    public static function getTotal() {
         return self::$total;
     }
-    public static function getMoneda()
-    {
+
+    public static function getMoneda() {
         return self::$moneda;
     }
-    public static function getTipoCambio()
-    {
+
+    public static function getTipoCambio() {
         return self::$tipoCambio;
     }
-    public static function getTipoDeComprobante()
-    {
+
+    public static function getTipoDeComprobante() {
         return self::$tipoDeComprobante;
     }
-    public static function getMetodoPago()
-    {
+
+    public static function getMetodoPago() {
         return self::$metodoPago;
     }
-    public static function getFormaPago()
-    {
+
+    public static function getFormaPago() {
         return self::$formaPago;
     }
-    public static function getCondicionesPago()
-    {
+
+    public static function getCondicionesPago() {
         return self::$condicionesPago;
     }
-    public static function getLuegarExpedicion()
-    {
+
+    public static function getLuegarExpedicion() {
         return self::$luegarExpedicion;
     }
-    public static function getEmisorRfc()
-    {
+
+    public static function getEmisorRfc() {
         return self::$emisorRfc;
     }
-    public static function getEmisorNombre()
-    {
+
+    public static function getEmisorNombre() {
         return self::$emisorNombre;
     }
-    public static function getRegimenFiscal()
-    {
+
+    public static function getRegimenFiscal() {
         return self::$regimenFiscal;
     }
-    public static function getReceptorRfc()
-    {
+
+    public static function getReceptorRfc() {
         return self::$receptorRfc;
     }
-    public static function getReceptorNombre()
-    {
+
+    public static function getReceptorNombre() {
         return self::$receptorNombre;
     }
-    public static function getResidenciaFiscal()
-    {
+
+    public static function getResidenciaFiscal() {
         return self::$residenciaFiscal;
     }
-    public static function getNumRegIdTrib()
-    {
+
+    public static function getNumRegIdTrib() {
         return self::$numRegIdTrib;
     }
-    public static function getUsoCFDI()
-    {
+
+    public static function getUsoCFDI() {
         return self::$usoCFDI;
     }
-    public static function getTotalImpuestosTraslados()
-    {
+
+    public static function getTotalImpuestosTraslados() {
         return self::$totalImpuestosTraslados;
     }
-    public static function getTotalImpuestosRetencion()
-    {
+
+    public static function getTotalImpuestosRetencion() {
         return self::$totalImpuestosRetencion;
     }
-    public static function getTrasladosIVA()
-    {
+
+    public static function getTrasladosIVA() {
         return self::$trasladosIVA;
     }
-    public static function getTrasladosIEPS()
-    {
+
+    public static function getTrasladosIEPS() {
         return self::$trasladosIEPS;
     }
-    public static function getRetencionesISR()
-    {
+
+    public static function getRetencionesISR() {
         return self::$retencionesISR;
     }
-    public static function getRetencionesIVA()
-    {
+
+    public static function getRetencionesIVA() {
         return self::$retencionesIVA;
     }
-    public static function setRetencionesIVA($retencionesIVA)
-    {
+
+    public static function setRetencionesIVA($retencionesIVA) {
         self::$retencionesIVA = $retencionesIVA;
     }
-    public static function getRetencionesIEPS()
-    {
+
+    public static function getRetencionesIEPS() {
         return self::$retencionesIEPS;
     }
-    public static function getTotalImpuestosLocalesTraslados()
-    {
+
+    public static function getTotalImpuestosLocalesTraslados() {
         return self::$totalImpuestosLocalesTraslados;
     }
-    public static function getTotalImpuestosLocalesRetencion()
-    {
+
+    public static function getTotalImpuestosLocalesRetencion() {
         return self::$totalImpuestosLocalesRetencion;
     }
-    public static function getComplementos()
-    {
+
+    public static function getComplementos() {
         return self::$complementos;
     }
-    public static function getUuid()
-    {
+
+    public static function getUuid() {
         return self::$uuid;
     }
-    public static function getFechaTimbrado()
-    {
+
+    public static function getFechaTimbrado() {
         return self::$fechaTimbrado;
     }
-    public static function getRfcProvCertif()
-    {
+
+    public static function getRfcProvCertif() {
         return self::$rfcProvCertif;
     }
-    public static function getSelloCFD()
-    {
+
+    public static function getSelloCFD() {
         return self::$selloCFD;
     }
-    public static function getUrlXml()
-    {
+
+    public static function getUrlXml() {
         return self::$urlXml;
     }
-    public static function getEarMonth()
-    {
+
+    public static function getEarMonth() {
         return self::$yearMonth;
     }
-    public static function getStatus()
-    {
+
+    public static function getStatus() {
         return self::$status;
     }
-    private static function ValidateCredentials()
-    {
+
+    private static function ValidateCredentials() {
         Services::get_token();
     }
-
-
-
-
 
 
 }

@@ -3,14 +3,12 @@
 namespace SWServices\Resend;
 
 use Exception;
-use SWServices\Services;
 use SWServices\Helpers\RequestHelper as HttpRequest;
 use SWServices\Helpers\ResponseHelper as Response;
+use SWServices\Services;
 
-class ResendRequest extends Services
-{
-    protected static function postResendEmail($uuid, $email)
-    {
+class ResendRequest extends Services {
+    protected static function postResendEmail($uuid, $email) {
         try {
             if (!self::validateParams($uuid, $email)) {
                 return Response::toErrorResponse("El UUID o los correos no son válidos.");
@@ -28,8 +26,8 @@ class ResendRequest extends Services
             return Response::handleException($e);
         }
     }
-    private static function validateParams($uuid, $email)
-    {
+
+    private static function validateParams($uuid, $email) {
         if (is_null($uuid) || is_null($email)) {
             return false;
         }

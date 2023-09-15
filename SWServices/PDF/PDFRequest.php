@@ -1,12 +1,11 @@
 <?php
+
 namespace SWServices\PDF;
 
 use Exception;
 
-class PdfRequest
-{
-    public static function sendReqGenerate($urlApi, $token, $xml, $logo, $templateId, $extras)
-    {
+class PdfRequest {
+    public static function sendReqGenerate($urlApi, $token, $xml, $logo, $templateId, $extras) {
         $data = json_encode(
             array(
                 "xmlContent" => $xml,
@@ -44,4 +43,5 @@ class PdfRequest
         }
     }
 }
+
 ?>
