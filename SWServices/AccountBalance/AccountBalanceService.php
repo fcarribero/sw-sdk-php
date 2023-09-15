@@ -19,4 +19,3 @@ class AccountBalanceService extends Services {
     }
 }
 
-?>

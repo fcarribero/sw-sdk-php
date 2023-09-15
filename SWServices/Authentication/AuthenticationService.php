@@ -27,4 +27,3 @@ class AuthenticationService extends Services {
 }
 
 
-?>

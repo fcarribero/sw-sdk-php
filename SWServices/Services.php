@@ -95,8 +95,3 @@ class Services extends Request {
 
 
 }
-
-;
-
-
-?>

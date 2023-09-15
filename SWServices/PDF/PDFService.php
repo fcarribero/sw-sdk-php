@@ -66,4 +66,3 @@ class PdfService extends Services {
 }
 
 
-?>
