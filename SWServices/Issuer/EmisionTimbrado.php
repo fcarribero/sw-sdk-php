@@ -1,6 +1,6 @@
 <?php
 
-namespace SWServices\Stamp;
+namespace SWServices\Issuer;
 
 use SWServices\Services as Services;
 use SWServices\Stamp\StampHelper as StampHelper;
